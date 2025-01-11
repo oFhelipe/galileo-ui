@@ -1,0 +1,11 @@
+{
+  "name": "@galileo-ui/eslint-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "eslint": "^8.57.1"
+  }
+}
