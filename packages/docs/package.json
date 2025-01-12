@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "@galileo-ui/react": "*",
+    "@galileo-ui/tokens": "*",
+    "@galileo-ui/eslint-config": "*"
   },
   "devDependencies": {
-    "@galileo-ui/eslint-config": "*",
     "@chromatic-com/storybook": "^3.2.3",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",

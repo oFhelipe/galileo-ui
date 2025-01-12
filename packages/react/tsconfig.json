@@ -1,4 +1,7 @@
 {
   "extends": "@galileo-ui/ts-config/react.json",
-  "include": ["src"],
+  "include": ["src", "@types/**/*"],
+    "compilerOptions": {
+      "typeRoots": ["./@types", "./node_modules/@types"],
+    },  
 }

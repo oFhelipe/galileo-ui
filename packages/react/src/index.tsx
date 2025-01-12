@@ -1,7 +1,3 @@
-import React from "react";
+export * from './components/ThemeProvider'
 
-const App = () => {
-  return <span>ola mundo</span>;
-};
-
-export default App;
+export * from './components/Button'
