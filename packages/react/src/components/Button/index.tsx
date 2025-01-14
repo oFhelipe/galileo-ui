@@ -18,3 +18,5 @@ export const Button = ({
     <S.Button $size={size} $variant={variant} $color={color} {...buttonProps} />
   );
 };
+
+Button.displayName = "Button";
