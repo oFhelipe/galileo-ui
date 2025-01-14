@@ -2,5 +2,13 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "packageManager": "npm@10.2.3",
+  "dependencies": {
+    "turbo": "^2.3.3"
+  }
 }
