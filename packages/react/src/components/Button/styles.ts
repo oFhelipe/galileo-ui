@@ -41,7 +41,7 @@ const buttonSizesCss = {
   `,
 };
 
-export const Button: FC<ButtonStyleProps> = styled.button<ButtonStyleProps>`
+export const Button = styled.button<ButtonStyleProps>`
   outline: none;
   border: none;
   color: #fff;

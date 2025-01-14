@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, ComponentRef, forwardRef } from "react";
 import * as S from "./styles";
 import { colors } from "@galileo-ui/tokens";
 
@@ -8,15 +8,26 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: string;
 }
 
-export const Button = ({
-  size = "md",
-  variant = "default",
-  color = colors.purple["700"],
-  ...buttonProps
-}: ButtonProps) => {
-  return (
-    <S.Button $size={size} $variant={variant} $color={color} {...buttonProps} />
-  );
-};
+export const Button = forwardRef<ComponentRef<typeof S.Button>, ButtonProps>(
+  (
+    {
+      size = "md",
+      variant = "default",
+      color = colors.purple["700"],
+      ...buttonProps
+    }: ButtonProps,
+    ref
+  ) => {
+    return (
+      <S.Button
+        ref={ref}
+        $size={size}
+        $variant={variant}
+        $color={color}
+        {...buttonProps}
+      />
+    );
+  }
+);
 
 Button.displayName = "Button";
