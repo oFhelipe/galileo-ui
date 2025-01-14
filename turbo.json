@@ -5,11 +5,32 @@
       "outputs": ["dist/**", "build/**", "storybook-static/**"]
     },
     "check-types": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build", "^build-storybook"]
     },
     "dev": {
       "persistent": true,
       "cache": false
+    },
+    "@galileo-ui/docs#build": {
+      "dependsOn": [
+        "@galileo-ui/ts-config#build",
+        "@galileo-ui/eslint-config#build",
+        "@galileo-ui/tokens#build",
+        "@galileo-ui/react#build"
+      ]
+    },
+    "@@galileo-ui/tokens": {},
+    "@@galileo-ui/ts-config": {},
+    "@@galileo-ui/eslint-config": {},
+    "@galileo-ui/react#build": {
+      "dependsOn": [
+        "@galileo-ui/ts-config#build",
+        "@galileo-ui/eslint-config#build",
+        "@galileo-ui/tokens#build"
+      ]
+    },
+    "@galileo-ui#build": {
+      "dependsOn": ["@galileo-ui#build"]
     }
   }
 }
